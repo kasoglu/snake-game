@@ -4,6 +4,7 @@ from food import Food
 from scoreboard import ScoreBoard
 import time
 
+# Setting Graphical Interfaces 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
@@ -14,10 +15,12 @@ screen.addshape("apple.gif")
 starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 segments = []
 
+# Importing classes
 food = Food()
 snake = Snake()
 scoreboard = ScoreBoard()
 
+# Control the snake with keys
 screen.listen()
 screen.onkey(snake.up, "w")
 screen.onkey(snake.down, "s")
